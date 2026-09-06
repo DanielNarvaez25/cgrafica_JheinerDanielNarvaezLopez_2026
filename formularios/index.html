@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<!-- Control + k + u -->
+<!-- Control + a -->
+<!-- Shift + alt + f -->
+<!-- Control + k y Control + t -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0"> <!-- Vas a crear un viewport, de acuerdo
+                                                                            que se cargue-->
+
+    <title> Formulario HTML y CSS </title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+
+
+</head>
+
+
+<body>
+    <h1> Formulario de Contacto</h1>
+    <form action="#" method="POST">
+
+        <div class="form-field">
+            <label for="nombre"> Nombre </label> <!-- Muestran, no procesan-->
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="name">
+
+        </div>
+
+        <div class="form-field">
+            <label for="email"> Correo electronico </label>
+            <input type="email" id="email" name="email" placeholder="nombre@empresa.com" autocomplete="email"
+                required>
+
+        </div>
+
+        <div class="form-field">
+            <label for="password"> Contraseña </label>
+            <input type="password" id="password" name="password" minlength="8" autocomplete="new-password" required>
+        </div>
+
+        <div class="form-field">
+            <label for="telefono"> Telefono </label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" autocomplete="tel">
+
+            <div class="form-field">
+                <label for="sitio">Sitio web</label>
+                <input type="url" id="sitio" name="sitio" placeholder="hhtps://www.miempresa.com">
+
+            </div>
+
+            <div class="form-field">
+                <label for="empleados"> Numero de empleados</label>
+                <input type="number" id="empleados" name="empleados" min="1" max="100000" step="1">
+
+            </div>
+
+            <div class="form-field">
+                <label for="fecha"> Selecione fecha</label>
+                <input type="date" id="fecha" name="fecha">
+
+            </div>
+
+            <div class="form-field">
+                <label for="hora"> Seleccione hora</label>
+                <input type="time" id="hora" name="hora">
+
+            </div>
+
+            <div class="form-field">
+                <label for="fecha-hora"> Seleccione Fecha y Hora</label>
+                <input type="datetime-local" id="fecha-hora" name="fecha-hora">
+                <!-- type week, para seleccionar semanas, month, para seleccionar meses-->
+
+            </div>
+
+            <div class="form-field">    
+                <label for="servicio"> Servicio de interes</label>
+                <select id="servicio" name="servicio" required> <!-- parametros con las que actuara la lista-->
+
+                    <optgroup label="Auditorias de Seguridad">
+
+                        <option value=""> <!-- opciones de la lista -->
+                            Seleccione Opción
+                        </option>
+                        <option value="pentesting">
+                            Pentesting web
+                        </option>
+                        <option value="hacking-etico">
+                            Hacking Ético
+                        </option>
+                        <option value="iso27001">
+                            ISO 27001
+                        </option>
+                    </optgroup>
+
+                    <optgroup label="Desarrollo seguro">
+                        <option value="ssdlc"> SSDLC </option>
+                        <option value="devsecops"> DevSevOps </option>
+                        <option value="ai-security"> AI Security </option>
+                    </optgroup>
+                    </optgroup>
+
+                </select>
+            </div>
+
+            <div class="form-field">
+                <fieldset>
+                    <!-- Crear radio buttons -->
+                    <legend> Tipo de contacto</legend>
+                    <label>
+                        <input type="radio" name="tipo-contacto" value="correo" checked> Correo electronico
+                    </label>
+
+                    <label>
+                        <input type="radio" name="tipo-contacto" value="telefono"> Telefono
+                    </label>
+
+                    <label>
+                        <input type="radio" name="tipo-contacto" value="videollamada"> Video-llamada
+                    </label>
+
+                </fieldset>
+
+            </div>
+
+            <div class="form-field">
+                <fieldset>
+                    <legend> Temas de interes</legend>
+
+                    <label>
+                        <input type="checkbox" name="intereses" valor="ciberseguridad"> Ciberseguridad
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="intereses" valor="hacking-etico"> Hacking Etico
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="intereses" valor="seguridad"> Seguridad
+                    </label>
+
+                </fieldset>
+
+            </div>
+
+            
+
+            <div class="form-field">
+                <label for="mensaje"> Cuentanos sobre su necesidad</label>
+                <textarea id="mensaje" name="mensaje" rows="7" maxlength="200"
+                    placeholder="Describa brevemente el contexto..." required>
+
+            </textarea>
+
+
+            </div>
+
+            <div class="form-field">
+                <label for="archivo"> Documento de soporte</label>
+                <input type="file" id="archivo" name="archivo" accept=".pdf, .docx, .xlsx, .xls">
+                <!-- Esto deberia hacerse desde el backend (accept)-->
+
+            </div>
+
+
+            <div class = "form-actions"> 
+                <label> 
+                    <input type = "checkbox"  name="terminos"  required>
+                    Acepto los terminos y condiciones
+                </label>
+            </div>
+
+
+            <div class="form-actions">
+                <button type="submit" class="button button-primary">
+                    Enviar solicitud
+                </button>
+                <button type="reset" class="button button-secondary"> 
+                    Limpiar
+                </button>
+
+            </div>
+
+
+
+        </div>
+
+    </form>
+
+</body>
+
+</html>
