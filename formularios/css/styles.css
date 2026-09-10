@@ -114,6 +114,21 @@ body{ /* Permitira que la fuente sea compatible en todos los dispositivos */
     gap: 8px; 
 }
 
+.form-block{
+    display: grid;
+    gap: 20px; 
+    padding-bottom: 8px;
+}
+
+.form-block h2 {
+    margin: 0;
+    color : var(--navy);
+    font-size: 1.15rem;
+}
+
+
+
+
 .form-field label, fieldset legend{
     color: var(--navy); 
 
