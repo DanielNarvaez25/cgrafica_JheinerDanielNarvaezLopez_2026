@@ -329,3 +329,18 @@ fieldset legend{
 .required-mark { 
     color: var(--danger); 
 }
+
+
+/* Modulo 31 */
+.form-field input:disabled, 
+.form-field select:disabled, 
+.form-field textarea:disabled { 
+    background:#f2f4f7; 
+    color:#98a2b3; 
+    cursor: not-allowed; 
+} 
+ 
+.form-field input[readonly] { 
+    background:#f8fafc; 
+} 
+
