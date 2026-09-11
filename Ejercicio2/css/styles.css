@@ -1,0 +1,314 @@
+:root {
+
+    --primary: #ff4400;
+    --primary-hover: #e85d00;
+    --primary-light: #2a170b;
+
+    --background: #0b0b0b;
+    --surface: #191919;
+
+    --text: #f5f1e8;
+    --muted: #77736c;
+
+    --border: #2d2d2d;
+
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+
+    --shadow:
+        0 24px 70px rgba(0, 0, 0, 0.55);
+
+}
+
+
+/* Configuración general */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    color-scheme: dark;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+
+    background: var(--background);
+    color: var(--text);
+}
+
+
+/* Página */
+
+.form-page {
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+}
+
+
+/* Contenedor */
+
+.form-container {
+
+    width: min(100%, 550px);
+
+    padding: 40px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow);
+}
+
+.form-section{
+    padding: 70px 20px;
+}
+
+/* Encabezado */
+
+.form-header {
+
+    margin-bottom: 28px;
+}
+
+.form-header h1 {
+
+    margin: 0;
+
+    color: var(--primary);
+
+    font-size: 2.2rem;
+
+    line-height: 1.2;
+}
+
+.form-header p {
+
+    margin: 10px 0 0;
+
+    color: var(--muted);
+
+    line-height: 1.5;
+}
+
+
+/* Formulario */
+
+.reservation-form {
+
+    display: grid;
+
+    gap: 18px;
+}
+
+
+/* Campos */
+
+.form-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px; 
+}
+
+.form-field {
+
+    display: grid;
+
+    gap: 7px;
+}
+
+.form-field label {
+
+    color: var(--text);
+
+    font-size: .9rem;
+
+    font-weight: 600;
+}
+
+
+/* Inputs, fecha, hora y número */
+
+.form-field input,
+.form-field textarea {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-sm);
+
+    background: #111;
+
+    color: var(--text);
+
+    font: inherit;
+
+    outline: none;
+
+    transition:
+        border-color 160ms ease,
+        box-shadow 160ms ease,
+        background-color 160ms ease;
+}
+
+
+/* Altura para inputs */
+
+.form-field input {
+
+    height: 44px;
+}
+
+
+/* Comentarios */
+
+.form-field textarea {
+
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+/* Placeholder */
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+
+    color: #777;
+}
+
+
+/* Seleccionar campo */
+
+.form-field input:focus,
+.form-field textarea:focus {
+
+    border-color: var(--primary);
+
+    background: #151515;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 68, 0, 0.12);
+}
+
+.required-mark { 
+    color: var(--danger); 
+}
+
+/* Fecha y hora */
+
+.form-field input[type="date"],
+.form-field input[type="time"] {
+
+    cursor: pointer;
+}
+
+
+/* Número de personas */
+
+.form-field input[type="number"] {
+
+    appearance: textfield;
+}
+
+
+/* Botones */
+
+.form-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+    padding-top: 5px;
+}
+
+.button {
+
+    flex: 1;
+
+    min-height: 46px;
+
+    border: 1px solid var(--primary);
+
+    border-radius: var(--radius-sm);
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    font: inherit;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 160ms ease,
+        transform 160ms ease,
+        box-shadow 160ms ease;
+}
+
+.button:hover {
+
+    background: var(--primary-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 20px rgba(255, 68, 0, 0.20);
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    .form-page {
+
+        padding: 20px 14px;
+    }
+
+    .form-container {
+
+        padding: 28px 20px;
+
+        border-radius: var(--radius-md);
+    }
+
+    .form-header h1 {
+
+        font-size: 1.8rem;
+    }
+
+    .form-actions {
+
+        flex-direction: column;
+    }
+
+}

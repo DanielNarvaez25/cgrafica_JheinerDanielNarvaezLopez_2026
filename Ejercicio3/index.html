@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<!-- JHEINER DANIEL NARVAEZ LOPEZ -->
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0"> <!-- Vas a crear un viewport, de acuerdo
+                                                                            que se cargue-->
+
+    <title> Ejercicio 3 </title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<!-- Ejercicio 3: crea una encuesta con radio buttons, checkboxes y range. -->
+
+
+<body>
+    <main class="form-page">
+        <section class="form-section">
+
+            <header class="form-header">
+
+                <h1> Encuesta de satisfacion </h1>
+                <p>
+                    Complete el formulario.
+                </p>
+
+            </header>
+
+
+            <fieldset>
+                <legend>
+                    ¿Qué tan satisfecho estás con el servicio?
+                </legend>
+
+                <form class="contact-form" action="" method="POST"> 
+                    
+
+                <div class="choice-list">
+
+                    <label class="choice">
+                        <input type="radio" name="escala" value="Muy satisfecho" checked>
+                        <span>
+                            Muy satisfecho
+                        </span>
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="escala" value="satisfecho">
+                        <span>
+                            Satisfecho
+                        </span>
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="escala" value="neutral">
+                        <span>
+                            Neutral
+                        </span>
+                    </label>
+
+                    <label class="choice">
+                        <input type="radio" name="escala" value="insatisfecho">
+                        <span>
+                            Insatisfecho
+                        </span>
+                    </label>
+
+                    <label class = "choice">
+                        <input type="radio" name="escala" value="insatisfecho">
+                        <span>
+                            Muy insatisfecho
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    ¿Qué aspectos del servicio te gustaron?
+                </legend>
+
+                <div class="choice-list">
+                    <label class="choice">
+                        <input type="checkbox" name="intereses" valor="atencion">
+                        <span> Atención </span>
+                    </label>
+
+                    <label class="choice">
+                        <input type="checkbox" name="intereses" valor="precio">
+                        <span> Precio </span>
+                    </label>
+
+                    <label class="choice">
+                        <input type="checkbox" name="intereses" valor="calidad">
+                        <span> Calidad </span>
+                    </label>
+
+                    <label class="choice">
+                        <input type="checkbox" name="intereses" valor="rapidez">
+                        <span> Rapidez </span>
+                    </label>
+
+                    <label class="choice">
+                        <input type="checkbox" name="intereses" valor="facilidad de uso">
+                        <span> Facilidad de uso </span>
+                    </label>
+
+
+                </div>
+            </fieldset>
+
+
+            <div class="form-field">
+                <label for="empleados"> ¿Qué calificación le darías al servicio?
+                    <span class="required-mark" aria-hidden="true">*</span>
+                </label>
+                <input type="number" id="calificacion" name="calificacion" min="1" 
+                max="10" step="1" required>
+
+                </label>
+            </div>
+
+            <div class="form-field">
+                <label for="mensaje">
+                    ¿Tienes alguna sugerencia?
+                 <span class="required-mark" aria-hidden="true">*</span>
+
+                </label>
+            <textarea id="mensaje" name="mensaje" rows="7" maxlength="2000" 
+            placeholder="Comentario adicional... "
+                required>
+                        </textarea>
+
+            <small class="field-help">
+                Maximo 2000 caracteres
+            </small>
+            </div>
+
+            <!-- Botones -->
+            <div class="form-actions">
+                <button type="submit" class="button button-primary">
+                    Enviar solicitud
+                </button>
+                <button type="reset" class="button button-secondary">
+                    Limpiar
+                </button>
+            </div>
+
+                </form>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<!-- JHEINER DANIEL NARVAEZ LOPEZ -->
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0"> <!-- Vas a crear un viewport, de acuerdo
+                                                                            que se cargue-->
+
+    <title> Ejercicio 2 </title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<!-- Ejercicio 2: crea un formulario de reserva con fecha, hora, 
+     número de personas y comentarios. -->
+
+<body>
+    <main class="form-page">
+        <section class="form-section">
+
+            <div class="form-container">
+                <header class="form-header">
+                    <h1>
+                        Formulario de reserva
+                    </h1>
+                    <p>
+                        Diligencie todos sus datos, para registrarlo en la agenda
+                    </p>
+                </header>
+
+                <form class="contact-form" action="#" method="POST">
+
+                    <h2>
+                        Datos personales
+                    </h2>
+                    <div class="form-grid">
+
+                        <div class="form-field">
+                            <label for="nombre"> Nombre:
+                                <span class="requerid-mark" aria-hidden="true">*</span>
+                            </label> <!-- Muestran, no procesan-->
+                            <input type="text" id="nombre" name="nombre" 
+                            autocomplete="given-name" placeholder="Roberto"
+                                required autocomplete="name">
+
+                        </div>
+
+                        <div class="form-field">
+                            <label for="apellido">Apellido:
+                                <span class="requerid-mark" aria-hidden="true">*</span>
+                            </label>
+                            <input type="text" id="apellido" name="apellido" 
+                                autocomplete="family-name"
+                                placeholder="Narvaez" required>
+                        </div>
+
+                    </div>
+                        <div class="form-field">
+                            <label for="documento"> Documento:
+                                <span class="requerid-mark" aria-hidden="true">*</span>
+                            </label> <!-- Muestran, no procesan-->
+                            <input type="text" id="documento" name="documento" 
+                            autocomplete="given-documento" placeholder="100000000"
+                                required >
+
+                        </div>
+
+                        <div class="form-field">
+                            <label for="telefono"> Telefono: </label>
+                            <input type="tel" id="telefono" name="telefono" 
+                                placeholder="+57 300 000 0000"
+                                autocomplete="tel">
+                        </div>
+                    <!-- Agenda -->
+
+
+                        <h2>
+                            Disponibilidad
+                        </h2>
+
+                        <div class="form-grid">
+
+                            <div class="form-field">
+                                <label for="fecha"> Selecione fecha</label>
+                                <input type="date" id="fecha" name="fecha">
+
+                            </div>
+
+                            <div class="form-field">
+                                <label for="hora"> Seleccione hora</label>
+                                <input type="time" id="hora" name="hora">
+
+                            </div>
+                        </div>
+
+                   
+
+                            <div class="form-field">
+                                <label for="empleados"> Numero de personas</label>
+                                <input type="number" id="empleados" name="empleados" min="1" step="1">
+
+                            </div>
+
+     
+
+                    <div class="form-field">
+                        <label for="mensaje">
+                            Dejenos su comentario
+                            <span class="required-mark" aria-hidden="true">*</span>
+
+                        </label>
+                            <textarea id="mensaje" name="mensaje" rows="7" maxlength="1200"
+                                placeholder="Describa brevemente que requiere..." required>
+                        </textarea>
+
+                            <small class="field-help">
+                                Maximo 1200 caracteres
+                            </small>
+                        </div>
+
+          
+                <label class="choice">
+                    <input type="checkbox" name="terminos" required>
+                    <span> Acepto el tratamiento de la informacion suministrada </span>
+                </label>
+
+                <div class="form-actions">
+                    <button type="submit" class="button button-primary">
+                        Enviar solicitud
+                    </button>
+                    <button type="reset" class="button button-secondary">
+                        Limpiar
+                    </button>
+
+                    </div>
+
+
+                </form>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
