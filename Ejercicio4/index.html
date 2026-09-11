@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- JHEINER DANIEL NARVAEZ LOPEZ -->
+<html lang="es">
+
+<head>
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width = device-width, initial scale = 1.0">
+
+    <title> Ejercicio 4 </title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<!-- Ejercicio 4: crea un formulario de solicitud laboral con file para adjuntar CV.  -->
+
+<body>
+    <main class="form-page">
+        <section class="form-section">
+            <div class="form-container">
+                <header class="form-header">
+                    <span class="eyebrow">
+                        hoja de vida
+                    </span>
+
+                    <h1>
+                        Formulario de solicitud laboral
+                    </h1>
+                    <p>
+                        Complete el formulario. Los campos marcados con
+                        <strong>*</strong> son obligatorios.
+                    </p>
+
+                </header>
+
+                <form class="contact-form" action="#" method="POST">
+                    <h2>
+                        Datos personales
+                    </h2>
+                    <div class="form-grid">
+
+                        <div class="form-field">
+                            <label for="nombre"> Nombres
+                                <span class="requerid-mark" aria-hidden="true">*</span>
+                            </label> <!-- Muestran, no procesan-->
+                            <input type="text" id="nombre" name="nombre" autocomplete="given-name"
+                                placeholder="Jheiner Daniel" required autocomplete="name">
+
+                        </div>
+
+                        <div class="form-field">
+                            <label for="apellido">Apellidos
+                                <span class="requerid-mark" aria-hidden="true">*</span>
+                            </label>
+                            <input type="text" id="apellido" name="apellido" autocomplete="family-name"
+                                placeholder="Narvaez Lopez" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="telefono"> Telefono </label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000"
+                                autocomplete="tel">
+                        </div>
+
+                    </div>
+
+                    <h2>
+                        Informacion laboral
+                    </h2>
+                    <!-- Cargo al que desea aplicar
+                            Experiencia laboral
+                            Nivel de estudios -->
+                    <div class="form-field">
+                        <label for="cargo"> Cargos a aplicar </label>
+                        <span class="requerid-mark" aria-hidden="true"> * </span>
+                        <select id="cargo" name="cargo" required>
+                            <option value="" selected disabled>
+                                Seleccione un empleo
+                                <optgroup label="Area de software">
+                                    <option value="front-end">
+                                        Desarrollador Front-End
+                                    </option>
+                                    <option value="data-base">
+                                        Bases de datos
+                                    </option>
+                                    <option value="back-end">
+                                        Desarrollador Back-End
+                                    </option>
+                                </optgroup>
+                                <optgroup label="Area de Diseño">
+                                    <option value="diseñador-interfaces"> Diseñador de interfaces </option>
+                                    <option value="diseñador-publicitario"> Diseñador de publicidad</option>
+                                    <option value="diseñador-arteconceptual"> Diseñador de arteconceptual </option>
+                                </optgroup>
+
+
+                            </option>
+
+
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="years"> ¿Años de experiencia laboral? </label>
+                        <input type="number" id="years-exp" name="years-exp" min="1" step="1" max="100">
+
+                    </div>
+
+                    <fieldset>
+                        <legend>
+                            Nivel de estudios
+                        </legend>
+                        <div class="choice-list">
+                            <label class="choice">
+                                <input type="radio" name="estudios" value="educacion-secundaria" checked>
+                                <span>
+                                    Educación secundaria
+                                </span>
+                            </label>
+                            <label class="choice">
+                                <input type="radio" name="estudios" value="tecnico">
+                                <span>
+                                    Técnico
+                                </span>
+
+                            </label>
+
+                            <label class="choice">
+                                <input type="radio" name="estudios" value="tecnologo">
+                                <span>
+                                    Tecnólogo
+                                </span>
+                            </label>
+
+                            <label class="choice">
+                                <input type="radio" name="estudios" value="universitario">
+                                <span>
+                                    Universitario
+                                </span>
+                            </label>
+                            <label class="choice">
+                                <input type="radio" name="estudios" value="especializacion">
+                                <span>
+                                    Especialización
+                                </span>
+
+                            </label>
+
+                            <label class="choice">
+                                <input type="radio" name="estudios" value="maestria">
+                                <span>
+                                    Maestría
+                                </span>
+
+                            </label>
+                            <label class="choice">
+                                <input type="radio" name="estudios" value="doctorado" checked>
+                                <span>
+                                    Doctorado
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+                    <h2>
+                        Disponibilidad
+                    </h2>
+                    <div class="form-grid">
+
+                        <div class="form-field">
+                            <label for="fecha"> Selecione fecha en la que puede comenzar</label>
+                            <input type="date" id="fecha" name="fecha">
+
+                        </div>
+
+                    </div>
+                    <fieldset>
+                        <legend>Tipo de jornada</legend>
+                        <div class="choice-list">
+                            <label class="choice">
+                                <input type="radio" name="jornada" value="completo" checked>
+                                <span>Tiempo completo</span>
+                            </label>
+                            <label class="choice">
+                                <input type="radio" name="jornada" value="medio">
+                                <span>Medio tiempo</span>
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+                    <!-- Archivo -->
+                    <div class="form-field">
+                        <label for="archivo"> Adjuntar CV</label>
+                        <input type="file" id="archivo" name="archivo" accept=".pdf, .docx">
+                        <!-- Esto deberia hacerse desde el backend (accept)-->
+                        <small class="field-help">
+                            Formatos sugeridos: PDF o Word.
+                        </small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="mensaje">
+                            Informacion adicional
+                            <span class="required-mark" aria-hidden="true">*</span>
+
+                        </label>
+                        <textarea id="mensaje" name="mensaje" rows="7" maxlength="1200"
+                            placeholder="Describa brevemente que necesitas..." required>
+                        </textarea>
+
+                        <small class="field-help">
+                            Maximo 1200 caracteres
+                        </small>
+                    </div>
+
+
+                    <!-- Terminos -->
+                    <label class="choice">
+                        <input type="checkbox" name="terminos" required>
+                        <span> Acepto el tratamiento de la informacion suministrada </span>
+                    </label>
+
+                    <!-- Botones -->
+                    <div class="form-actions">
+                        <button type="submit" class="button button-primary">
+                            Enviar solicitud
+                        </button>
+                        <button type="reset" class="button button-secondary">
+                            Limpiar
+                        </button>
+
+                </form>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

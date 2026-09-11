@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- JHEINER DANIEL NARVAEZ LOPEZ -->
+<html lang="es">
+<!--  Ejercicio 5: crea un formulario de soporte con select de prioridad, textarea y archivo. -->
+
+<!--
+ Datos del usuario
+Nombre
+Correo electrónico
+Asunto
+¿Cuál es el motivo de su solicitud?
+Prioridad — select
+¿Cuál es la prioridad del problema?
+Baja
+Media
+Alta
+Urgente
+Descripción — textarea
+¿Qué problema está presentando?
+Campo amplio para explicar detalladamente el inconveniente.
+Archivo — file
+¿Desea adjuntar un archivo?
+Captura de pantalla, documento, registro del error, etc.
+Botones
+Enviar solicitud
+Limpiar -->
+
+<head>
+    <meta charset="UFT-8">
+    <meta name="viewport" content="width = device-width, initial scale = 1.0">
+
+    <title> Ejercicio 5</title>
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+
+<body>
+
+    <main class="form-page">
+        <section class="form-section">
+            <div class="form-container">
+
+                <header class="form-header">
+                    <h1>
+                        Formulario de soporte
+                    </h1>
+                    <p>
+                        Cuentanos tu problema
+                    </p>
+
+                </header>
+
+                <form class="contact-form" action="#" method="POST">
+                    <h2>
+                        Datos del usuario
+                    </h2>
+
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="nombre"> Nombre
+                                <span class="requerid-mark" aria-hidden="true">*</span>
+                            </label> <!-- Muestran, no procesan-->
+                            <input type="text" id="nombre" name="nombre" autocomplete="given-name" placeholder="Julieta"
+                                required autocomplete="name">
+
+                        </div>
+
+                        <div class="form-field">
+                            <label for="apellido">Apellido
+                                <span class="requerid-mark" aria-hidden="true">*</span>
+                            </label>
+                            <input type="text" id="apellido" name="apellido" autocomplete="family-name"
+                                placeholder="Martinez" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="email"> Correo electronico
+                            <span class="requerid-mark" aria-hidden="true">
+                                *
+                            </span>
+                        </label>
+                        <input type="email" id="email" name="email" placeholder="nombre@empresa.com"
+                            autocomplete="email" required>
+
+                    </div>
+
+                    <fieldset>
+                        <legend>¿Cual es el tipo de problema</legend>
+                        <div class="choice-list">
+                            <label class="choice">
+                                <input type="radio" name="problema" value="problema-acceso" checked>
+                                <span>
+                                    Problema de acceso
+                                </span>
+                            </label>
+
+                            <label class="choice">
+                                <input type="radio" name="problema" value="error-sistema">
+                                <span>
+                                    Error del sistema
+                                </span>
+                            </label>
+
+                            <label class="choice">
+                                <input type="radio" name="problema" value="problema-conexion">
+                                <span> Problema de conexión </span>
+                            </label>
+
+                            <label class="choice">
+                                <input type="radio" name="problema" value="problema-cuenta">
+                                <span> Problema con la cuenta </span>
+                            </label>
+
+                            <label class="choice">
+                                <input type="radio" id="otro" name="problema" value="otro">
+                                <span>Otro</span>
+                            </label>
+
+                            <input type="text" class="otro-input" name="otro_problema"
+                                placeholder="Especifique el problema...">
+
+
+                        </div>
+                    </fieldset>
+
+                            <div class="form-field">
+
+                                <label for="prioridad">
+                                    ¿Que tan urgente es su solicitud?
+                                </label>
+                                <select id="prioridad" name="prioridad" required>
+                                    <option value="" selected disabled>
+                                        Seleccione una prioridad
+                                    </option>
+
+                                    <option value="baja">
+                                        Baja
+                                    </option>
+
+                                    <option value="media">
+                                        Media
+                                    </option>
+
+                                    <option value="alta">
+                                        Alta
+                                    </option>
+
+                                    <option value="urgente">
+                                        Urgente
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        <!-- Descripcion -->
+                        <div class = "form-field">
+                            <label for="descripcion">
+                                Describa el problema
+                            </label>
+
+                            <textarea id="descripcion" name="descripcion" rows="6" maxlength="2000" 
+                            placeholder="Explique el problema que presenta..." required>
+                        </textarea>
+
+                        <small class="field-help">
+                            Maximo 2000 caracteres
+                        </small>
+
+                        </div>
+
+                        <div class="form-field">
+                            <label for="archivo"> 
+                                Adjuntar archivo
+                            </label>
+                            <input type="file" id="archivo" name="archivo" accept=".pdf, .png, .jpg, .jpeg, .doc, .docx">
+                            <small class="field-help">
+                                Puede adjuntar una captura de pantalla
+                            o documento relacionado con el problema 
+                        </small>
+
+                        </div>
+
+                                                <!-- Terminos -->
+                        <label class="choice">
+                            <input type="checkbox" name="terminos" required>
+                            <span> Acepto el tratamiento de la informacion suministrada </span>
+                        </label>
+
+                        <!-- Botones -->
+                        <div class="form-actions">
+                            <button type="submit" class="button button-primary">
+                                Enviar solicitud
+                            </button>
+                            <button type="reset" class="button button-secondary">
+                                Limpiar
+                            </button>
+                        </div>
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

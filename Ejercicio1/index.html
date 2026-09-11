@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!-- JHEINER DANIEL NARVAEZ LOPEZ -->
-<html lang = "es">
+<html lang="es">
 
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width = device-width, initial-scale = 1.0"> <!-- Vas a crear un viewport, de acuerdo
                                                                             que se cargue-->
@@ -14,52 +14,52 @@
 términos.  -->
 
 </head>
+
 <body>
 
     <main class="form-page">
-        
-        <div class = "form-container"> 
 
-            <header class= "form-header">
-            <h1>
-                Formulario identidad
-            </h1>
-            <p>
-                Complete el formulario, llenar los campos obligatorios
-            </p>
+        <div class="form-container">
+
+            <header class="form-header">
+                <h1>
+                    Formulario identidad
+                </h1>
+                <p>
+                    Complete el formulario, llenar los campos obligatorios
+                </p>
             </header>
 
-            
-            <div class="contact-form" action = "#" method = "POST">
 
-                <div class = "form-grid"> 
-                <h2 > 
-                    Datos personales
-                    
-                </h2>
+            <form class="contact-form" action="#" method="POST">
+
+                <div class="form-field">
+                    <h2>
+                        Datos personales
+
+                    </h2>
                     <label for="nombre"> Nombre:
-                        <input type="text" id="nombre" name="nombre" 
-                        autocomplete="given-name" placeholder="Julian"
-                        required autocomplete = "name">
+                        <input type="text" id="nombre" name="nombre" autocomplete="given-name" placeholder="Julian"
+                            required autocomplete="name">
 
                     </label>
 
                 </div>
 
-                <div class="form-grid">
+                <div class="form-field">
 
-                    <label for = "email"> Correo electronico:
-                        <input type="email" id = "email" name="email" 
-                        placeholder="julian@gmail.com" autocomplete="email" required>
+                    <label for="email"> Correo electronico:
+                        <input type="email" id="email" name="email" placeholder="julian@gmail.com" autocomplete="email"
+                            required>
                     </label>
 
                 </div>
 
-                <div class="form-grid">
-                    <label for = "password" >  Contraseña: 
-                        <input type="password" id = "password" name="password"
-                        minlength="8" autocomplete="new-password" required>
-                    </label> 
+                <div class="form-field">
+                    <label for="password"> Contraseña:
+                        <input type="password" id="password" name="password" minlength="8" autocomplete="new-password"
+                            required>
+                    </label>
                 </div>
 
                 <!-- Terminos -->
@@ -77,10 +77,10 @@ términos.  -->
                         Limpiar
                     </button>
 
-            </div>
+                </div>
 
 
-        </div>
+            </form>
 
     </main>
 
