@@ -11,6 +11,7 @@
 
     --border: #2d2d2d;
     --danger: #ef233c;
+    --approved : #4caf50;
 
     --radius-sm: 9px;
     --radius-md: 6px;
@@ -173,27 +174,18 @@ body {
 
 .choice {
     display: flex;
-
     align-items: flex-start;
-
     gap: 10px;
-
     cursor: pointer;
-
     color: var(--muted);
-
     font-size: .85rem;
-
     line-height: 1.5;
 }
 
 .choice input {
     margin-top: 3px;
-
     flex-shrink: 0;
-
     accent-color: var(--primary);
-
     cursor: pointer;
 }
 
@@ -208,13 +200,11 @@ body {
     width: 100%;
 
     min-height: 46px;
-
     border: 1px solid var(--primary);
     border-radius: var(--radius-sm);
 
     background: var(--primary);
     color: #ffffff;
-
     font: inherit;
     font-weight: 700;
 
@@ -237,7 +227,7 @@ body {
 /* Validación visual */
 
 .form-field input:not(:placeholder-shown):valid {
-    border-color: #4caf50;
+    border-color: var(--approved);
 }
 
 .form-field input:not(:placeholder-shown):invalid {

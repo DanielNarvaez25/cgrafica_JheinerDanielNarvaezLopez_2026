@@ -69,15 +69,10 @@ body {
 .form-container {
 
     width: min(100%, 550px);
-
     padding: 40px;
-
     background: var(--surface);
-
     border: 1px solid var(--border);
-
     border-radius: var(--radius-lg);
-
     box-shadow: var(--shadow);
 }
 
@@ -95,20 +90,15 @@ body {
 .form-header h1 {
 
     margin: 0;
-
     color: var(--primary);
-
     font-size: 2.2rem;
-
     line-height: 1.2;
 }
 
 .form-header p {
 
     margin: 10px 0 0;
-
     color: var(--muted);
-
     line-height: 1.5;
 }
 
@@ -141,9 +131,7 @@ body {
 .form-field label {
 
     color: var(--text);
-
     font-size: .9rem;
-
     font-weight: 600;
 }
 
@@ -154,15 +142,10 @@ body {
 .form-field textarea {
 
     width: 100%;
-
     padding: 12px 14px;
-
     border: 1px solid var(--border);
-
     border-radius: var(--radius-sm);
-
-    background: #111;
-
+    background: var(--background);
     color: var(--text);
 
     font: inherit;
@@ -210,7 +193,7 @@ body {
 
     border-color: var(--primary);
 
-    background: #151515;
+    background: var(--background);
 
     box-shadow:
         0 0 0 3px rgba(255, 68, 0, 0.12);
@@ -242,9 +225,7 @@ body {
 .form-actions {
 
     display: flex;
-
     gap: 10px;
-
     padding-top: 5px;
 }
 
@@ -253,19 +234,12 @@ body {
     flex: 1;
 
     min-height: 46px;
-
     border: 1px solid var(--primary);
-
     border-radius: var(--radius-sm);
-
     background: var(--primary);
-
     color: #ffffff;
-
     font: inherit;
-
     font-weight: 700;
-
     cursor: pointer;
 
     transition:
@@ -277,7 +251,6 @@ body {
 .button:hover {
 
     background: var(--primary-hover);
-
     transform: translateY(-2px);
 
     box-shadow:
@@ -297,7 +270,6 @@ body {
     .form-container {
 
         padding: 28px 20px;
-
         border-radius: var(--radius-md);
     }
 
