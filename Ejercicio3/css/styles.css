@@ -143,7 +143,7 @@ body {
 
     border-radius: var(--radius-md);
 
-    background: #111;
+    background: var(--background);
 }
 
 .form-block h2 {
@@ -183,11 +183,24 @@ body {
     width: 17px;
     height: 17px;
 
+    padding: 0 14px;
+
     margin: 0;
 
     accent-color: var(--primary);
 
     cursor: pointer;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--background);
+    color: var(--text);
+    font: inherit;
+    outline: none;
+    transition: border-color 160ms ease,
+                box-shadow 160ms ease,
+                background-color 160ms ease;
+
 }
 
 .choice:hover {
@@ -238,8 +251,29 @@ body {
 .form-field label {
 
     font-size: .9rem;
-
     font-weight: 600;
+}
+
+input[type="number"]{
+    
+    padding: 0 14px;
+
+    margin: 0;
+
+    accent-color: var(--primary);
+
+    cursor: pointer;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--background);
+    color: var(--text);
+    font: inherit;
+    outline: none;
+    transition: border-color 160ms ease,
+                box-shadow 160ms ease,
+                background-color 160ms ease;
+
 }
 
 .form-field textarea {
@@ -247,21 +281,13 @@ body {
     width: 100%;
 
     min-height: 110px;
-
     padding: 12px 14px;
-
     border: 1px solid var(--border);
-
     border-radius: var(--radius-sm);
-
-    background: #111;
-
+    background: var(--background);
     color: var(--text);
-
     font: inherit;
-
     resize: vertical;
-
     outline: none;
 }
 
@@ -287,21 +313,13 @@ body {
 .button {
 
     width: 100%;
-
     min-height: 46px;
-
     border: 1px solid var(--primary);
-
     border-radius: var(--radius-sm);
-
     background: var(--primary);
-
     color: #ffffff;
-
     font: inherit;
-
     font-weight: 700;
-
     cursor: pointer;
 
     transition:
