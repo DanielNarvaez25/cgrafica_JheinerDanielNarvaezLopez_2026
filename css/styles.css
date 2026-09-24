@@ -27,6 +27,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -35,6 +36,7 @@ body {
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--text);
     background: var(--background);
+    overflow-x: hidden;
 }
 
 a {
@@ -722,7 +724,21 @@ section[id] {
     margin: 0 0 8px;
 }
 
+/* Responsive: 2 columnas en tablet, 1 en móvil */
+@media (max-width: 900px) {
+    .tarjetas { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+    .tarjetas { grid-template-columns: 1fr; }
+}
 
+/* En móvil, todo en una columna y sin invertir */
+@media (max-width: 800px) {
+    .fila,
+    .fila-invertida {
+        flex-direction: column;
+    }
+}
 
 
 @media (max-width: 900px) {
@@ -746,5 +762,92 @@ section[id] {
     .footer-superior {
         flex-direction: column;
         gap: 24px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .nav {
+        display: none;   /* oculta el menú de enlaces */
+    }
+
+    .header-container {
+        justify-content: space-between;
+    }
+
+    .acciones .btn-oscuro {
+        display: none;   /* deja solo el botón principal, ej. "Comenzar" */
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 70vh;
+        padding: 40px 0;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-acciones {
+        flex-direction: column;   /* los botones se apilan */
+        width: 100%;
+        max-width: 280px;
+        margin-inline: auto;
+    }
+
+    .hero-acciones .btn {
+        text-align: center;
+    }
+}
+
+
+/* Tabla  */
+@media (max-width: 600px) {
+    .subnav {
+        width: calc(100% - 32px);   /* ya no "fit-content", para que no se corte */
+        gap: 16px;
+        padding: 12px 16px;
+        overflow-x: auto;            /* si no cabe, se puede deslizar */
+        white-space: nowrap;
+    }
+}
+
+/* Precios */
+@media (max-width: 600px) {
+    .plan {
+        padding: 24px 20px;
+    }
+
+    .plan-costo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
+
+/* Cta final */
+@media (max-width: 600px) {
+    .cta-fondo {
+        padding: 48px 24px;
+        border-radius: 16px;
+    }
+
+    .cta-acciones {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+
+/* FAQ */
+@media (max-width: 600px) {
+    .faq-item summary {
+        font-size: 0.9rem;
+        padding: 16px 4px;
     }
 }
