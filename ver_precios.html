@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 
-<!-- Jheiner Daniel narvaez Lopez -->
- <!-- Tengo la pagina principal y la secundaria, es ver precios, aparece al inicio -->
-
-
 <html lang="es">
 
 <head>
@@ -40,153 +36,133 @@
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container hero-content">
-                <h1>Entrenado en Unity.<br>Diseñado para el desarrollo de juegos.</h1>
-                <p>Las herramientas de IA de Unity están integradas en sus flujos de trabajo y son seguras por diseño.
-                </p>
 
-                <div class="hero-acciones">
-                    <a href="#" class="btn btn-azul">Iniciar prueba gratuita</a>
-                    <a href="ver_precios.html" class="btn btn-oscuro">Ver precios</a>
-                </div>
-            </div>
-        </section>
-
-        <nav class="subnav" aria-label="Secciones de la pagina">
-            <a href="#comience"> Comience </a>
-            <a href="#faq"> FAQ </a>
-            <a href="#informacion"> Informacion adicional </a>
-        </nav>
-
-    
-
-        <section class="herramientas">
+        <section class="precios">
             <div class="container">
-                <h2>Herramientas de IA en Unity</h2>
+                <h2>Plans and prices</h2>
 
-                <div class="tarjetas">
-                    <article class="tarjeta">
-                        <img src="img/asistente_agente.png" alt="Asistente agente en el editor de Unity">
-                        <div class="tarjeta-contenido">
-                            <h3>Asistente agente</h3>
-                            <p>Editor integrado. Proyecto consciente. Diseñado para sus flujos de trabajo. Múltiples
-                                modelos a elegir para cada paso de su proyecto.</p>
-                            <a href="#" class="btn btn-azul">Ver documentos auxiliares</a>
+                <div class="planes">
+                    <!-- Unity Personal -->
+                    <article class="plan">
+                        <h3>Unity Personal</h3>
+                        <p class="plan-desc">Para aficionados y pequeños equipos independientes. Opciones adicionales
+                            disponibles para estudiantes y educadores <a href="#">aquí</a>.</p>
+
+                        <div class="plan-aviso">Solo para aplicaciones de juegos y entretenimiento.</div>
+
+                        <div class="plan-costo">
+                            <div>
+                                <span class="costo-label">COST</span>
+                                <span class="costo-nota">No se requiere tarjeta de crédito</span>
+                            </div>
+                            <span class="costo-precio">Gratis</span>
+                        </div>
+
+                        <a href="#" class="btn btn-azul btn-ancho">Descargar ahora</a>
+
+                        <div class="plan-incluye">
+                            <h4>¿Qué incluye?</h4>
+                            <ul class="lista-check">
+                                <li>Publicar en web, escritorio, AR/VR y móvil</li>
+                                <li>Acceso al ecosistema de Unity Cloud</li>
+                                <li>Acceso a MCP</li>
+                                <li>Acceso a la interfaz de línea de comandos</li>
+                            </ul>
+                        </div>
+
+                        <div class="plan-premium">
+                            <h4> Funciones premium</h4>
+                            <p>Prueba las herramientas de IA de Unity gratis durante 14 días, <a href="#">suscripción de
+                                    pago disponible después de la prueba</a>.</p>
+                            <p>✓ Asignación mensual de 1,000 créditos para las herramientas de IA de Unity. Se aplican
+                                <a href="#">términos especiales</a> a los créditos de Unity.</p>
                         </div>
                     </article>
 
-                    <article class="tarjeta">
-                        <img src="img/ai_gat.png" alt="AI Gateway de Unity">
-                        <div class="tarjeta-contenido">
-                            <h3>AI Gateway</h3>
-                            <p>Conecte sus modelos y herramientas directamente. Diseñado para maximizar el rendimiento,
-                                la seguridad y el control.</p>
-                            <a href="#" class="btn btn-azul">Ver Gateway Docs</a>
+                    <!-- Pro -->
+                    <article class="plan plan-destacado">
+                        <h3>Pro <span class="etiqueta">LOS MÁS POPULARES</span></h3>
+                        <p class="plan-desc">Para equipos experimentados y desarrolladores en solitario.</p>
+
+                        <div class="plan-aviso">Requerido para empresas con más de $200K en financiación o ingresos
+                            anuales.</div>
+
+                        <div class="plan-toggle">
+                            <label class="opcion-pago">
+                                <input type="radio" name="pago-pro" checked>
+                                Pago mensual
+                            </label>
+                            <label class="opcion-pago">
+                                <input type="radio" name="pago-pro">
+                                Pagar anualmente
+                            </label>
+                        </div>
+
+                        <div class="plan-costo">
+                            <div>
+                                <span class="costo-label">COSTE</span>
+                                <span class="costo-nota">Por mes</span>
+                            </div>
+                            <span class="costo-precio">$210.00</span>
+                        </div>
+
+                        <a href="#" class="btn btn-azul btn-ancho">Elige un plan</a>
+
+                        <div class="plan-incluye">
+                            <h4>Todo en Personal, y:</h4>
+                            <ul class="lista-check">
+                                <li>Construir y publicar para consolas de juegos y Apple Vision Pro</li>
+                                <li>Soporte al cliente acelerado</li>
+                                <li>Almacenamiento en la nube adicional y características</li>
+                            </ul>
+                        </div>
+
+                        <div class="plan-premium">
+                            <h4> Funciones premium</h4>
+                            <p>Incluido en tu plan de pago</p>
+                            <p>✓ Asignación mensual de 2,000 créditos para las herramientas de IA de Unity. Se aplican
+                                <a href="#">términos especiales</a> a los créditos de Unity.</p>
                         </div>
                     </article>
 
-                    <article class="tarjeta">
-                        <img src="img/servidor_mcp.png" alt="Servidor MCP de Unity">
-                        <div class="tarjeta-contenido">
-                            <h3>Servidor MCP</h3>
-                            <p>Puente a Unity desde su IDE o aplicación preferida. Más eficiente que las alternativas de
-                                código abierto.</p>
-                            <a href="#" class="btn btn-azul">Ver MCP Docs</a>
+                    <!-- Enterprise -->
+                    <article class="plan">
+                        <h3>Enterprise</h3>
+                        <p class="plan-desc">Para equipos ambiciosos que resuelven problemas complicados. <a
+                                href="#">Los términos especiales</a> se aplican para el juego. Pueden aplicarse
+                            compromisos mínimos de suscripción o gasto.</p>
+
+                        <div class="plan-aviso">Requerido para empresas con más de $25 millones en ingresos anuales.
+                        </div>
+
+                        <div class="plan-costo">
+                            <div>
+                                <span class="costo-label">COSTE</span>
+                                <span class="costo-nota">Se necesitan comerciales</span>
+                            </div>
+                            <span class="costo-precio">Precios personalizados</span>
+                        </div>
+
+                        <a href="#" class="btn btn-azul btn-ancho">Póngase en contacto con el departamento de ventas</a>
+
+                        <div class="plan-incluye">
+                            <h4>Todo en PRO, and:</h4>
+                            <ul class="lista-check">
+                                <li>Automatización de construcción en la nube y en las instalaciones</li>
+                                <li>Acceso al código fuente (solo lectura)</li>
+                                <li>Año adicional de soporte LTS</li>
+                                <li>Soporte especializado</li>
+                                <li>Almacenamiento en la nube empresarial y características</li>
+                            </ul>
+                        </div>
+
+                        <div class="plan-premium">
+                            <h4> Funciones premium</h4>
+                            <p>Incluido en tu plan de pago</p>
+                            <p>✓ Asignación mensual de 3,000 créditos para las herramientas de IA de Unity. Se aplican
+                                <a href="#">términos especiales</a> a los créditos de Unity.</p>
                         </div>
                     </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="destacados">
-            <div class="container">
-
-                <div class="fila">
-                    <div class="texto">
-                        <h3>IA que entiende de juegos</h3>
-                        <p>Nuestro asistente en el editor está adaptado a los flujos de trabajo específicos de Unity y
-                            se basa en el contexto de su proyecto. Esto significa respuestas más relevantes, mejor
-                            ejecución de tareas y menos reintentos.</p>
-                    </div>
-                    <div class="medio">
-                        <video src="./vid/ai.mp4" autoplay muted loop playsinline></video>
-                    </div>
-                </div>
-
-                <div class="fila fila-invertida">
-                    <div class="texto">
-                        <h3>Dale vida a tus activos</h3>
-                        <p>Las herramientas de IA de Unity le ayudan a convertir diseños, imágenes y referencias
-                            visuales en activos listos para proyectos y escenas reproducibles.</p>
-                    </div>
-                    <div class="medio">
-                        <video src="./vid/ai2.mp4" autoplay muted loop playsinline></video>
-                    </div>
-                </div>
-
-                <div class="fila">
-                    <div class="texto">
-                        <h3>Una mejor integración significa más control</h3>
-                        <p>Deshacer cambios en cualquier momento. Etiqueta los activos generados por IA para una
-                            revisión más fácil. Establecer permisos para controlar la autonomía del agente.</p>
-                    </div>
-                    <div class="medio">
-                        <video src="./vid/ai3.mp4" autoplay muted loop playsinline></video>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="comience" class="pasos">
-            <div class="container">
-                <h2>Cómo empezar con las herramientas de IA de Unity</h2>
-
-                <div class="tarjetas">
-                    <article class="tarjeta">
-                        <img src="img/instalar_unity.png" alt="Unity Hub mostrando las instalaciones de Unity 6">
-                        <div class="tarjeta-contenido">
-                            <h3>Paso 1 – Instalar Unity 6+</h3>
-                            <p>Instale Unity 6 o superior desde el archivo de versiones o directamente en el Hub.</p>
-                            <a href="#" class="btn btn-azul">Descargar Unity</a>
-                        </div>
-                    </article>
-
-                    <article class="tarjeta">
-                        <img src="img/instalar_paquete_IA.png" alt="Editor de Unity con el botón de IA">
-                        <div class="tarjeta-contenido">
-                            <h3>Paso 2 – Instalar el paquete de IA</h3>
-                            <p>Haga clic en el botón AI en el Editor e instale el paquete de asistente. ¿No ves el
-                                botón? Siga las instrucciones del documento enlazadas a continuación para instalar a
-                                través del Administrador de paquetes.</p>
-                            <a href="#" class="btn btn-azul">Leer docs</a>
-                        </div>
-                    </article>
-
-                    <article class="tarjeta">
-                        <img src="img/enlace_unity_cloud.png" alt="Panel de Services General Settings en Unity">
-                        <div class="tarjeta-contenido">
-                            <h3>Paso 3 – Enlace a Unity Cloud</h3>
-                            <p>Asegúrese de que su proyecto esté vinculado a un proyecto en la nube.</p>
-                            <a href="#" class="btn btn-azul">Panel abierto</a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta">
-            <div class="cta-fondo">
-                <div class="cta-contenido">
-                    <h2>Comienza a construir con las herramientas de IA de Unity en beta</h2>
-                    <p>¿Aún no tienes claro por dónde empezar? Obtén instrucciones claras para que las herramientas de
-                        IA de Unity funcionen en tu proyecto.</p>
-
-                    <div class="cta-acciones">
-                        <a href="#" class="btn btn-azul">Comience</a>
-                        <a href="#" class="enlace-simple">Ver precios</a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -222,7 +198,7 @@
             </div>
         </section>
 
-        <footer class="footer" id = "informacion">
+        <footer class="footer" id="informacion">
             <div class="container">
 
                 <!-- Fila superior: idioma, social, moneda -->
