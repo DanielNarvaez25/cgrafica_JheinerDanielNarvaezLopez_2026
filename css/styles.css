@@ -1,0 +1,548 @@
+:root{
+    --principal : #08004e;
+    --secundario : #07081c;
+    --secundario_oscuro : #040405;
+
+    --background : #fff;
+    --background_azul : #2c44f7;
+
+    --text_azul : #7c8bfd ;
+    --text_blanco : #fff;
+
+    --border_oscuro : #222; 
+    
+    --container: 1240px;
+    --navy : #593cff; 
+
+    --dangerous : red;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    color: #222;
+    background-color: var(--background);
+
+}
+
+
+.principal {
+    min-height: 100vh;
+    padding: 10px 20px;
+}
+
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    font-family:  Tahoma, sans-serif;
+}
+
+
+
+/* .................................................... */
+.form-block{
+    display: grid;
+    gap: 20px; 
+    padding-bottom: 8px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    width: min(calc(100% - 60px), var(--container));
+    margin-inline: auto;
+}
+
+
+.header {
+    position: sticky;
+
+    top: 0;
+    z-index: 1000;
+
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(14px);  
+}
+
+
+.header-container {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 28px;
+}
+
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav a {
+    color: var(--muted);
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+/* Logos */
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    height: 28px;
+    width: auto;
+    display: block;
+}
+
+
+
+/* .............................................. */
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto;
+}
+
+/* ............................................................. */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 999px;
+    color: var(--secundario);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+
+.btn-claro {
+    background: var(--background);
+}
+
+.btn-fondoazul{
+    color: var(--text_blanco);
+    background: var(--background_azul);
+    padding: 10px 5px;
+    border-radius: 12px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+}
+
+/* ........................................................... */
+
+
+.hero {
+    min-height: 90vh;
+    display: grid;
+    place-items: end;
+    /* centra el contenido en horizontal y vertical */
+    text-align: start;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        /* capa oscura para leer mejor */
+        url("../img/fondos/salud1.png") center / cover no-repeat;
+}
+
+
+.hero h1 {
+    font-size: clamp(1.2rem, 6vw, 3.5rem);
+    /* crece o se encoge según el ancho de pantalla */
+    
+    padding-inline: 50px 200px;
+    margin-top: 200px;
+    line-height: 1.05;
+    margin-bottom:  24px;
+    margin-right: 500px;
+    color: var(--secundario);
+}
+
+
+.hero h2 {
+    max-width: 60ch;
+    /* limita el ancho del texto */
+    
+    padding-inline: 50px 200px;
+    margin: 0 0 24px;
+    font-size: 0.75rem;
+    color: var(--secundario_oscuro);
+    
+}
+
+
+
+.mensajes {
+    min-height: 90vh;
+    display: grid;
+    place-items: end;
+    /* centra el contenido en horizontal y vertical */
+    text-align: start;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        /* capa oscura para leer mejor */
+        url("../img/fondos/contacto.jpg") center / cover no-repeat;
+}
+
+
+.mensajes h1 {
+    font-size: clamp(1.2rem, 6vw, 3.5rem);
+    /* crece o se encoge según el ancho de pantalla */
+    
+    padding-inline: 50px 200px;
+    margin-top: 200px;
+    line-height: 1.05;
+    margin-bottom:  24px;
+    margin-right: 500px;
+    color: var(--secundario);
+}
+
+
+.mensajes h2 {
+    max-width: 60ch;
+    /* limita el ancho del texto */
+    
+    padding-inline: 50px 200px;
+    margin: 0 0 24px;
+    font-size: 0.75rem;
+    color: var(--secundario_oscuro);
+    
+}
+
+
+/* ............................................................... */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 3 columnas iguales */
+    gap: 24px;
+}
+
+.tarjeta {
+    background: var(--background);
+    border-radius: var(--border_oscuro, 16px);
+    overflow: hidden;
+    /* recorta la imagen a los bordes redondeados */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    
+    border: 2px solid var(--border_oscuro);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px var(--color-sombra);
+
+}
+
+.tarjeta img {
+    width: 50%;
+    aspect-ratio: 16 / 10;  
+    /* mantiene proporción sin importar el tamaño real */
+    /* object-fit: cover; */
+    /* recorta la imagen en vez de deformarla */
+    
+    margin: 10px 10px 10px 10px;
+    display: center;
+}
+
+.tarjeta-contenido {
+    padding: 24px;
+    padding-left: 3px;
+    padding-right: 3px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* empuja el botón hacia abajo si un texto es más largo */
+}
+
+.tarjeta-contenido h1 {
+    font-size: 0.8;
+    /* margin: 0 0 0 0; */
+    color: var(--principal);
+    line-height: 1.5;
+    flex-grow: 1;
+    text-align: center;
+
+    
+    margin: 10px 10px 10px 10px;
+}
+
+.tarjeta-contenido h2 {
+    margin: 0 0 12px;
+    font-size: 0.2;
+    color: var(--secundario_oscuro);
+    line-height: 1.5;
+    flex-grow: 1;
+    text-align: center;
+}
+ 
+
+/* -------------------------------------------------------------------- */
+
+
+.noticias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas iguales */
+    gap: 24px;
+
+    
+
+    
+}
+
+.noticia {
+    background: var(--background);
+    border-radius: var(--border_oscuro, 16px);
+    overflow: hidden;
+    /* recorta la imagen a los bordes redondeados */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+
+    
+    border: 2px solid var(--border_oscuro);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px var(--color-sombra);
+}
+
+.noticia img {
+    width: 100%;
+    aspect-ratio: 16 / 10;  
+    /* mantiene proporción sin importar el tamaño real */
+    /* object-fit: cover; */
+    /* recorta la imagen en vez de deformarla */
+    display: center;
+}
+
+.noticia-contenido {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px 5px 20px 5px;
+
+    /* empuja el botón hacia abajo si un texto es más largo */
+
+}
+
+.eyebrow{
+    color: var(--background_azul);
+    background-color: var(--text_azul);
+    margin-right: 230px;
+
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.noticia-contenido h1 {
+    color: var(--principal);
+}
+
+.noticia-contenido p {
+    color: var(--secundario_oscuro);
+}
+
+/* .noticia-contenido h1 {
+    font-size: 0.8;
+    margin: 0 0 0 0;
+    color: var(--principal);
+    line-height: 1.5;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.noticia-contenido h2 {
+    margin: 0 0 12px;
+    font-size: 0.2;
+    color: var(--secundario_oscuro);
+    line-height: 1.5;
+    flex-grow: 1;
+    text-align: center; */
+
+
+
+
+    /* afsssssssssssssssssssssssssssssssssssssssssssss */
+
+
+    
+
+
+.footer {
+    background: var(--secundario);
+    color: #fff;
+    padding: 60px 0 40px;
+    
+    align-content: center;
+
+}
+
+.footer h4 {
+    color: var(--background);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+.footer a {
+    color: var(--background);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Fila superior */
+.footer-superior {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #2a2a2a;
+    margin-bottom: 40px;
+}
+
+ 
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social a {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.footer-moneda {
+    background: transparent;
+    border: 1px solid #444;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    width: 160px;
+}
+
+/* Columnas */
+.footer-columnas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding-bottom: 40px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Franja final */
+.footer-inferior {
+    border-top: 1px solid #2a2a2a;
+    padding-top: 24px;
+}
+
+.footer-copy {
+    color: #9a9a9a;
+    font-size: 0.85rem;
+    margin: 0 0 12px;
+}
+
+/* MEnsajes -------------------------------------------- */
+
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: grid;
+    gap: 24px;
+}
+
+label {
+    font-family:  Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+.requerid-mark {
+    color: var(--dangerous);
+}
+
+
+.form-field input, .form-field select, .form-field textarea{
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--secundario_oscuro);
+    border-radius: 10px;
+
+    background: var(--background);
+    color: var(--text);
+    font: inherit; 
+    outline: none;
+
+    transition: 
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+
+}
+
+
+.contact-info {
+    padding: 20px;
+    border-left: 1px solid #ddd;
+}
+
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
