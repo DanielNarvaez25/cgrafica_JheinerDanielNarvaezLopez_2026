@@ -63,14 +63,130 @@
                     <input type="text" id="nombre" name="nombre" autocomplete="Tu nombre completo" placeholder="Julieta"
                         required autocomplete="name">
 
-                    <label for="documento"> Tipo de documento
-                        <span class="requerid-mark" aria-hidden="true">*</span>
-                    </label>
-                    </label> <!-- Muestran, no procesan-->
-                    <input type="text" id="documento" name="documento" autocomplete="" placeholder="Julieta"
-                        required autocomplete="name">
 
                 </div>
+
+                <div class="form-field">
+
+                    <label for="tipo-documento">Tipo de documento *</label>
+
+                    <select id="tipo-documento" name="tipo-documento" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="cc">Cédula de ciudadanía</option>
+                        <option value="ce">Cédula de extranjería</option>
+                        <option value="pasaporte">Pasaporte</option>
+                    </select>
+
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="documento"> Numero de documento
+                            <span class="requerid-mark" aria-hidden="true">*</span>
+                        </label>
+                        </label> <!-- Muestran, no procesan-->
+                        <input type="text" id="documento" name="documento" autocomplete="Numero de documento"
+                            placeholder="Julieta" required autocomplete="name">
+
+                    </div>
+                    <div class="form-field">
+                        <label for="fecha"> Fecha de nacimiento</label>
+                        <input type="date" id="fecha" name="fecha">
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+                <div class="form-field">
+                    <label for="email"> Correo electronico
+                        <span class="requerid-mark" aria-hidden="true">
+                            *
+                        </span>
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="nombre@empresa.com" autocomplete="email"
+                        required>
+
+                </div>
+
+
+
+
+
+                <div class="form-field">
+                    <label for="telefono"> Telefono </label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" autocomplete="tel">
+                </div>
+
+                <label for="ciudad">Ciudad *</label>
+                <select id="ciudad" name="ciudad" required>
+                    <option value="">Selecciona una ciudad</option>
+                    <option value="bogota">Bogotá</option>
+                    <option value="pasto">Pasto</option>
+                    <option value="cali">Cali</option>
+                </select>
+
+
+                <label for="servicio">Servicio de interés *</label>
+                <select id="servicio" name="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="asesoria">Asesoría</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+
+                <label>Motivo del contacto *</label>
+
+                <div>
+                    <input type="radio" id="informacion" name="motivo" value="informacion">
+                    <label for="informacion">Solicitar información</label>
+
+                    <input type="radio" id="cita" name="motivo" value="cita">
+                    <label for="cita">Agendar una cita</label>
+
+                    <input type="radio" id="sugerencia" name="motivo" value="sugerencia">
+                    <label for="sugerencia">Comentario o sugerencia</label>
+
+                    <input type="radio" id="otro" name="motivo" value="otro">
+                    <label for="otro">Otro</label>
+                </div>
+
+                <div class="form-field">
+                    <label for="mensaje">
+                        Describa su necesidad
+                        <span class="required-mark" aria-hidden="true">*</span>
+
+                    </label>
+                    <textarea id="mensaje" name="mensaje" rows="7" maxlength="1200"
+                        placeholder="Describa brevemente que necesitas..." required>
+                        </textarea>
+
+                    <small class="field-help">
+                        Maximo 1200 caracteres
+                    </small>
+                </div>
+
+                <label class="choice">
+                    <input type="checkbox" name="terminos" required>
+                    <span> Acepto la politica de tratamiento de datos personales </span>
+                </label>
+
+                <div class="form-actions">
+                    <button type="submit" class="button button-primary">
+                        Enviar mensaje
+                    </button>
+
+
+
+                </div>
+
+
 
             </form>
 
@@ -92,8 +208,8 @@
                     7:00 a.m. - 6:00 p.m.</p>
             </div>
 
-        </div>
 
+        </div>
 
 
         <footer class="footer" id="informacion">
