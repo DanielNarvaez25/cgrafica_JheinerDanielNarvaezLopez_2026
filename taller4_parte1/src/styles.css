@@ -1,0 +1,111 @@
+/*  Variables globales (Brand) */
+:root {
+  --color-titulo: #ff4900;
+  --color-parrafo-1: #0093ff;
+  --color-parrafo-2: #c500ff;
+  --color-link: #001bff;
+  --color-link-visited: #4caf50;
+  --color-link-hover: #ff6600;
+
+  --color-th-fondo: #000000;
+  --color-th-texto: #ffffff;
+  --color-fila-clara: #bec1c3;
+  --color-fila-central: #045795;
+  --color-texto-oscuro: #000000;
+  --color-texto-claro: #ffffff;
+
+  --fuente-base: Arial, sans-serif;
+  --fuente-nerko: "Nerko One", cursive;
+
+  --tam-titulo: 2rem;
+  --tam-tabla: 1.5rem;
+}
+
+/*  html   */
+html {
+  font-size: 16px;
+}
+
+/*   body  */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: var(--fuente-base);
+  background-color: #ffffff;
+}
+
+/*   h2 =  */
+h2 {
+  color: var(--color-titulo);
+  font-size: var(--tam-titulo);
+}
+
+/* =  p   */
+p {
+  font-family: var(--fuente-base);
+}
+
+.parrafo-1 {
+  font-size: 1rem; /* 16px */
+  color: var(--color-parrafo-1);
+  font-family: Arial, sans-serif;
+}
+
+.parrafo-2 {
+  font-size: 12px;
+  color: var(--color-parrafo-2);
+  font-family: var(--fuente-nerko);
+}
+
+/*   a   */
+a {
+  color: var(--color-link);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--color-link-visited);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+/* table   */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #000000;
+  padding: 4px 8px;
+  text-align: left;
+}
+
+/*  th (encabezado)   */
+th {
+  background-color: var(--color-th-fondo);
+  color: var(--color-th-texto);
+  font-size: var(--tam-tabla);
+  text-align: center;
+}
+
+/*   filas: 1ª y 3ª (claras)  */
+tbody tr:nth-child(1),
+tbody tr:nth-child(3) {
+  background-color: var(--color-fila-clara);
+  color: var(--color-texto-oscuro);
+  font-size: var(--tam-tabla);
+}
+
+/* = fila central (2ª)  */
+tbody tr:nth-child(2) {
+  background-color: var(--color-fila-central);
+  color: var(--color-texto-claro);
+  font-size: var(--tam-tabla);
+}
