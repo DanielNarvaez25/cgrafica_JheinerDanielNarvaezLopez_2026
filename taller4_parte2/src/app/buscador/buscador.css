@@ -1,0 +1,9 @@
+.buscador {
+    width: clamp(120px, 16vw, 250px);
+    height: clamp(28px, 3vw, 40px);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    background-color: var(--blanco);
+    color: #000000;
+}

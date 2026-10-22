@@ -1,0 +1,16 @@
+:root {
+    --gris: #a6a6a6;
+    --gris-borde: #7f7f7f;
+    --amarillo: #ffc000;
+    --amarillo-borde: #bf9000;
+    --azul: #4472c4;
+    --verde: #70ad47;
+    --verde-borde: #507e32;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

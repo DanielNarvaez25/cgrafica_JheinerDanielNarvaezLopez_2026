@@ -1,0 +1,51 @@
+.main {
+    width: 90%;
+    height: 90vh;
+    margin: 20px auto;
+    border: 2px solid var(--gris-borde);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blanco);
+}
+
+app-header {
+    display: flex;
+    flex: 0 0 16%;
+}
+
+.contenedor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 12px 12px 0;
+    background-color: var(--azul);
+}
+
+.etiqueta {
+    text-align: center;
+    color: #000000;
+}
+
+.cuerpo {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    min-height: 0;
+}
+
+app-sidebar {
+    display: flex;
+    flex: 0 0 15%;
+}
+
+app-content {
+    display: flex;
+    flex: 1;
+}
+
+app-footer {
+    display: flex;
+    flex: 0 0 30%;
+    margin-left: 8px;
+}

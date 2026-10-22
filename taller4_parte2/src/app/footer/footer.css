@@ -1,0 +1,28 @@
+.footer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 10px;
+    background-color: var(--amarillo);
+    border: 1px solid var(--amarillo-borde);
+    color: var(--blanco);
+}
+
+.footer-items {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-item {
+    width: clamp(100px, 16vw, 200px);
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gris);
+    border: 1px solid var(--gris-borde);
+    color: var(--blanco);
+}

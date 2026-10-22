@@ -1,0 +1,15 @@
+.header {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: var(--gris);
+    border-bottom: 1px solid var(--gris-borde);
+}
+
+.titulo {
+    flex: 1;
+    text-align: center;
+    color: var(--blanco);
+}

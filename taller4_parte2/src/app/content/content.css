@@ -1,0 +1,9 @@
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--verde);
+    border: 1px solid var(--verde-borde);
+    color: var(--blanco);
+}
