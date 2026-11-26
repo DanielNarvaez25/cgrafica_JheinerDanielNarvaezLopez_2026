@@ -1,0 +1,64 @@
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hospital-icon {
+    font-size: 2.75rem;
+    color: var(--hospital-primario);
+}
+
+.header h1 {
+    margin: 0.75rem 0 0.5rem;
+}
+
+.header p {
+    margin: 0;
+    color: #64748b;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+    gap: 1rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.campo label {
+    font-weight: 600;
+}
+
+.error {
+    color: #dc2626;
+    font-size: 0.85rem;
+}
+
+.acciones {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.acciones > * {
+    flex: 1;
+}
+
+@media (max-width: 640px) {
+    .acciones {
+        flex-direction: column;
+    }
+}

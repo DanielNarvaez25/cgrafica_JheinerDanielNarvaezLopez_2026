@@ -1,0 +1,188 @@
+<div class="auth-page">
+    <p-card class="auth-card auth-card--ancha">
+        <div class="header">
+            <i class="pi pi-heart-fill hospital-icon"></i>
+
+            <h1>Hospital</h1>
+
+            <p>
+                Cree una cuenta para acceder al sistema.
+            </p>
+        </div>
+
+        <form
+            [formGroup]="form"
+            (ngSubmit)="registrar()"
+            class="formulario"
+        >
+            <div class="grid-form">
+
+                <div class="campo">
+                    <label>Identificación</label>
+
+                    <input
+                        pInputText
+                        formControlName="identificacion"
+                        (input)="soloDigitos($event, 'identificacion')"
+                    >
+
+                    @if (esInvalido('identificacion')) {
+                        <small class="error">
+                            Debe contener entre 5 y 20 dígitos.
+                        </small>
+                    }
+                </div>
+
+                <div class="campo">
+                    <label>Nombre</label>
+
+                    <input
+                        pInputText
+                        formControlName="nombre"
+                    >
+
+                    @if (esInvalido('nombre')) {
+                        <small class="error">
+                            Nombre obligatorio.
+                        </small>
+                    }
+                </div>
+
+                <div class="campo">
+                    <label>Apellido</label>
+
+                    <input
+                        pInputText
+                        formControlName="apellido"
+                    >
+
+                    @if (esInvalido('apellido')) {
+                        <small class="error">
+                            Apellido obligatorio.
+                        </small>
+                    }
+                </div>
+
+                <div class="campo">
+                    <label>Correo electrónico</label>
+
+                    <input
+                        pInputText
+                        formControlName="email"
+                    >
+
+                    @if (esInvalido('email')) {
+                        <small class="error">
+                            Correo electrónico inválido.
+                        </small>
+                    }
+                </div>
+
+                <div class="campo">
+                    <label>Cargo</label>
+
+                    <p-select
+                        formControlName="cargo"
+                        [options]="cargos"
+                        optionLabel="label"
+                        optionValue="value"
+                        appendTo="body"
+                    />
+
+                    @if (esInvalido('cargo')) {
+                        <small class="error">
+                            Seleccione un cargo.
+                        </small>
+                    }
+                </div>
+
+                <div class="campo">
+                    <label>Teléfono</label>
+
+                    <input
+                        pInputText
+                        formControlName="telefono"
+                        (input)="soloDigitos($event, 'telefono')"
+                    >
+
+                    @if (esInvalido('telefono')) {
+                        <small class="error">
+                            Debe contener entre 7 y 20 dígitos.
+                        </small>
+                    }
+                </div>
+
+                <div class="campo">
+                    <label>Nombre de usuario</label>
+
+                    <input
+                        pInputText
+                        formControlName="nombre_usuario"
+                    >
+
+                    @if (esInvalido('nombre_usuario')) {
+                        <small class="error">
+                            Formato inválido.
+                        </small>
+                    }
+                </div>
+
+                <div class="campo">
+                    <label>Contraseña</label>
+
+                    <p-password
+                        formControlName="password"
+                        [toggleMask]="true"
+                    />
+
+                    @if (esInvalido('password')) {
+                        <small class="error">
+                            Debe tener mínimo 8 caracteres, una letra y un número.
+                        </small>
+                    }
+                </div>
+
+                <div class="campo">
+                    <label>Confirmar contraseña</label>
+
+                    <p-password
+                        formControlName="confirmarPassword"
+                        [feedback]="false"
+                        [toggleMask]="true"
+                    />
+
+                    @if (
+                        form.hasError('passwordMismatch') &&
+                        (
+                            form.get('confirmarPassword')?.touched ||
+                            form.get('confirmarPassword')?.dirty
+                        )
+                    ) {
+                        <small class="error">
+                            Las contraseñas no coinciden.
+                        </small>
+                    }
+                </div>
+
+            </div>
+
+            <div class="acciones">
+                <button
+                    pButton
+                    type="submit"
+                    label="Crear cuenta"
+                    [loading]="cargando()"
+                    [disabled]="form.invalid"
+                ></button>
+
+                <a
+                    pButton
+                    routerLink="/login"
+                    severity="secondary"
+                >
+                    Volver al inicio de sesión
+                </a>
+            </div>
+        </form>
+    </p-card>
+</div>
